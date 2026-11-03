@@ -25,6 +25,9 @@ $info:      #0ea5e9;
 $light:     $gris-tarjeta;
 $dark:      $gris-oscuro;
 
+// Texto blanco en los botones azules (como en la practica anterior)
+$min-contrast-ratio: 3;
+
 $body-color: $texto;
 $body-bg:    #ffffff;
 $link-color: $azul-tienda;
