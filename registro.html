@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Crea tu cuenta en PCStore.">
+    <title>Registro - Tienda de Ordenadores</title>
+    <link rel="icon" type="image/x-icon" href="img/logotipoweb.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Unico CSS de la web: Bootstrap + estilos propios compilados con SASS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="barra-aviso">
+        <i class="bi bi-truck me-1" aria-hidden="true"></i> Envio gratis en pedidos de mas de 50 EUR -
+        <a href="novedades.html">Descubre la nueva Serie 2026</a>
+    </div>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-tienda sticky-top" aria-label="Menu principal">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <img src="img/logotipoweb.ico" alt="">
+                    PC<span>Store</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal"
+                    aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu-principal">
+                    <ul class="navbar-nav mx-auto gap-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogo.html">Catalogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="novedades.html">Novedades <span class="badge text-bg-warning ms-1">Nuevo</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="detalle.html">Producto</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-2 py-2 py-lg-0">
+                        <div id="zona-usuario" class="d-flex gap-2"></div>
+                        <a href="carrito.html" class="btn btn-light btn-carrito ms-2" aria-label="Ver carrito">
+                            <i class="bi bi-cart3" aria-hidden="true"></i>
+                            <span class="badge rounded-pill text-bg-primary contador-carrito">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="fondo-acceso">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="card tarjeta-acceso overflow-hidden">
+                        <div class="row g-0">
+                            <div class="col-md-5 d-none d-md-flex flex-column justify-content-center p-5 text-bg-dark">
+                                <h2 class="h4">Ventajas de ser cliente</h2>
+                                <ul class="list-unstyled d-grid gap-3 mt-3 mb-0">
+                                    <li><i class="bi bi-percent text-warning me-2"></i>Ofertas exclusivas</li>
+                                    <li><i class="bi bi-lightning-charge text-warning me-2"></i>Compra en un clic</li>
+                                    <li><i class="bi bi-bell text-warning me-2"></i>Aviso de lanzamientos</li>
+                                    <li><i class="bi bi-box-seam text-warning me-2"></i>Seguimiento de pedidos</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body">
+                                    <h1 class="h3">Crear cuenta</h1>
+                                    <p class="text-secondary">Solo te llevara un minuto.</p>
+
+                                    <form class="needs-validation row g-3" data-accion="registro" novalidate>
+                                        <div class="col-sm-6">
+                                            <label for="nombre" class="form-label">Nombre</label>
+                                            <input type="text" class="form-control" id="nombre" autocomplete="given-name" required>
+                                            <div class="invalid-feedback">Escribe tu nombre.</div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="apellidos" class="form-label">Apellidos</label>
+                                            <input type="text" class="form-control" id="apellidos" autocomplete="family-name" required>
+                                            <div class="invalid-feedback">Escribe tus apellidos.</div>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="email" class="form-label">Correo electronico</label>
+                                            <div class="input-group has-validation">
+                                                <span class="input-group-text"><i class="bi bi-envelope" aria-hidden="true"></i></span>
+                                                <input type="email" class="form-control" id="email" autocomplete="email" required>
+                                                <div class="invalid-feedback">Escribe un correo valido.</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="clave" class="form-label">Contrasena</label>
+                                            <input type="password" class="form-control" id="clave" autocomplete="new-password" minlength="8" required aria-describedby="ayuda-clave">
+                                            <div class="progress fuerza-clave mt-2" role="progressbar" aria-label="Fuerza de la contrasena" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                                <div class="progress-bar" style="width: 0%"></div>
+                                            </div>
+                                            <div id="ayuda-clave" class="form-text">Minimo 8 caracteres.</div>
+                                            <div class="invalid-feedback">Minimo 8 caracteres.</div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="clave2" class="form-label">Repetir contrasena</label>
+                                            <input type="password" class="form-control" id="clave2" autocomplete="new-password" required>
+                                            <div class="invalid-feedback">Las contrasenas no coinciden.</div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="boletin">
+                                                <label class="form-check-label" for="boletin">Quiero recibir ofertas y novedades</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="terminos" required>
+                                                <label class="form-check-label" for="terminos">Acepto los
+                                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modal-terminos">terminos y condiciones</a></label>
+                                                <div class="invalid-feedback">Debes aceptar los terminos.</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button class="btn btn-primary w-100 py-2" type="submit">Crear cuenta</button>
+                                        </div>
+                                    </form>
+                                    <p class="text-center mt-4 mb-0">Ya tienes cuenta? <a href="login.html" class="fw-semibold">Inicia sesion</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal de terminos -->
+        <div class="modal fade" id="modal-terminos" tabindex="-1" aria-labelledby="titulo-terminos" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title h5" id="titulo-terminos">Terminos y condiciones</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Tus datos solo se usan para gestionar tus pedidos y tu cuenta.</p>
+                        <p>Puedes pedir que borremos tu cuenta en cualquier momento escribiendo a soporte.</p>
+                        <p class="mb-0">Las compras tienen 30 dias de devolucion y 2 anos de garantia.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendido</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-tienda">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5>PC<span class="text-primary">Store</span></h5>
+                    <p>Tu tienda de ordenadores, portatiles, monitores y accesorios gaming. Envio en 24/48 h y 2 anos de garantia.</p>
+                    <div class="redes">
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Tienda</h5>
+                    <ul class="list-unstyled d-grid gap-2">
+                        <li><a href="catalogo.html">Catalogo</a></li>
+                        <li><a href="novedades.html">Novedades</a></li>
+                        <li><a href="carrito.html">Carrito</a></li>
+                        <li><a href="pago.html">Pago</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Mi cuenta</h5>
+                    <ul class="list-unstyled d-grid gap-2">
+                        <li><a href="login.html">Iniciar sesion</a></li>
+                        <li><a href="registro.html">Registrarse</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Boletin de novedades</h5>
+                    <p>Recibe las ofertas antes que nadie.</p>
+                    <form class="needs-validation" data-accion="boletin" novalidate>
+                        <div class="input-group">
+                            <label for="email-boletin" class="visually-hidden">Correo electronico</label>
+                            <input type="email" class="form-control" id="email-boletin" placeholder="tu@correo.com" required>
+                            <button class="btn btn-primary" type="submit">Suscribirme</button>
+                            <div class="invalid-feedback">Escribe un correo valido.</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="licencia">
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+                    <img alt="Licencia Creative Commons" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" width="88" height="31">
+                </a>
+                <p class="mt-2 mb-0">&copy; <span class="ano-actual">2026</span> PCStore. Esta obra esta bajo una
+                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia Creative Commons Atribucion-NoComercial-SinDerivadas 4.0 Internacional</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catalogo de portatiles, ordenadores, monitores y accesorios.">
+    <title>Catalogo - Tienda de Ordenadores</title>
+    <link rel="icon" type="image/x-icon" href="img/logotipoweb.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Unico CSS de la web: Bootstrap + estilos propios compilados con SASS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="barra-aviso">
+        <i class="bi bi-truck me-1" aria-hidden="true"></i> Envio gratis en pedidos de mas de 50 EUR -
+        <a href="novedades.html">Descubre la nueva Serie 2026</a>
+    </div>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-tienda sticky-top" aria-label="Menu principal">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <img src="img/logotipoweb.ico" alt="">
+                    PC<span>Store</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal"
+                    aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu-principal">
+                    <ul class="navbar-nav mx-auto gap-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="catalogo.html">Catalogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="novedades.html">Novedades <span class="badge text-bg-warning ms-1">Nuevo</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="detalle.html">Producto</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-2 py-2 py-lg-0">
+                        <div id="zona-usuario" class="d-flex gap-2"></div>
+                        <a href="carrito.html" class="btn btn-light btn-carrito ms-2" aria-label="Ver carrito">
+                            <i class="bi bi-cart3" aria-hidden="true"></i>
+                            <span class="badge rounded-pill text-bg-primary contador-carrito">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <nav aria-label="breadcrumb" class="mt-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Catalogo</li>
+                </ol>
+            </nav>
+
+            <section class="banner-pagina mt-2">
+                <h1>Catalogo de productos</h1>
+                <p>Los mejores portatiles, ordenadores y monitores gaming.</p>
+            </section>
+
+            <!-- Buscador y filtros -->
+            <div class="row g-3 align-items-center my-4">
+                <div class="col-md-5">
+                    <div class="input-group">
+                        <span class="input-group-text bg-white"><i class="bi bi-search" aria-hidden="true"></i></span>
+                        <label for="buscador" class="visually-hidden">Buscar producto</label>
+                        <input type="search" id="buscador" class="form-control" placeholder="Buscar producto..." oninput="filtrarProductos()">
+                    </div>
+                </div>
+                <div class="col-md-7 text-md-end">
+                    <div class="btn-group flex-wrap" role="group" aria-label="Filtrar por categoria">
+                        <button type="button" class="btn btn-outline-primary filtro-categoria active" aria-pressed="true" data-categoria="todas">Todas</button>
+                        <button type="button" class="btn btn-outline-primary filtro-categoria" aria-pressed="false" data-categoria="portatiles">Portatiles</button>
+                        <button type="button" class="btn btn-outline-primary filtro-categoria" aria-pressed="false" data-categoria="ordenadores">Ordenadores</button>
+                        <button type="button" class="btn btn-outline-primary filtro-categoria" aria-pressed="false" data-categoria="monitores">Monitores</button>
+                        <button type="button" class="btn btn-outline-primary filtro-categoria" aria-pressed="false" data-categoria="accesorios">Accesorios</button>
+                    </div>
+                </div>
+            </div>
+
+            <section class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4" aria-label="Productos">
+                <div class="col columna-producto" data-categoria="portatiles">
+                    <article class="card tarjeta-producto">
+                        <span class="badge text-bg-danger etiqueta">-10%</span>
+                        <img src="img/hp-victus.png" class="card-img-top" alt="HP Victus">
+                        <div class="card-body d-flex flex-column">
+                            <h2 class="card-title h6">HP - Victus 16.1" Gaming Laptop</h2>
+                            <p class="precio">899.99 EUR<span class="precio-antes">999.99</span></p>
+                            <button class="btn btn-primary mt-auto" onclick="anadirAlCarrito('HP - Victus 16.1 Gaming Laptop', 899.99)">Anadir al carrito</button>
+                        </div>
+                    </article>
+                </div>
+                <div class="col columna-producto" data-categoria="portatiles">
+                    <article class="card tarjeta-producto">
+                        <img src="img/dell-g15.png" class="card-img-top" alt="Dell G15">
+                        <div class="card-body d-flex flex-column">
+                            <h2 class="card-title h6">Dell - G15 15.6" Gaming Laptop</h2>
+                            <p class="precio">899.99 EUR</p>
+                            <button class="btn btn-primary mt-auto" onclick="anadirAlCarrito('Dell - G15 15.6 Gaming Laptop', 899.99)">Anadir al carrito</button>
+                        </div>
+                    </article>
+                </div>
+                <div class="col columna-producto" data-categoria="ordenadores">
+                    <article class="card tarjeta-producto">
+                        <span class="badge text-bg-success etiqueta">Top ventas</span>
+                        <img src="img/asus-rog.png" class="card-img-top" alt="ASUS ROG">
+                        <div class="card-body d-flex flex-column">
+                            <h2 class="card-title h6">ASUS - ROG Gaming Desktop</h2>
+                            <p class="precio">1499.99 EUR</p>
+                            <div class="d-grid gap-2 mt-auto">
+                                <button class="btn btn-primary" onclick="anadirAlCarrito('ASUS - ROG Gaming Desktop', 1499.99)">Anadir al carrito</button>
+                                <a href="detalle.html" class="btn btn-outline-dark btn-sm">Ver detalles</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col columna-producto" data-categoria="monitores">
+                    <article class="card tarjeta-producto">
+                        <img src="img/acer-nitro.png" class="card-img-top" alt="Acer Nitro">
+                        <div class="card-body d-flex flex-column">
+                            <h2 class="card-title h6">Acer - Nitro 27" Gaming Monitor</h2>
+                            <p class="precio">129.99 EUR</p>
+                            <button class="btn btn-primary mt-auto" onclick="anadirAlCarrito('Acer - Nitro 27 Gaming Monitor', 129.99)">Anadir al carrito</button>
+                        </div>
+                    </article>
+                </div>
+                <div class="col columna-producto" data-categoria="accesorios">
+                    <article class="card tarjeta-producto">
+                        <img src="img/cat-accesorios.png" class="card-img-top" alt="Teclado y raton gaming">
+                        <div class="card-body d-flex flex-column">
+                            <h2 class="card-title h6">Kit teclado y raton gaming RGB</h2>
+                            <p class="precio">59.99 EUR</p>
+                            <button class="btn btn-primary mt-auto" onclick="anadirAlCarrito('Kit teclado y raton gaming RGB', 59.99)">Anadir al carrito</button>
+                        </div>
+                    </article>
+                </div>
+                <div class="col columna-producto" data-categoria="monitores">
+                    <article class="card tarjeta-producto">
+                        <span class="badge bg-promo etiqueta">-20%</span>
+                        <img src="img/cat-monitores.png" class="card-img-top" alt="Monitor curvo">
+                        <div class="card-body d-flex flex-column">
+                            <h2 class="card-title h6">Monitor curvo 32" QHD 165 Hz</h2>
+                            <p class="precio">239.99 EUR<span class="precio-antes">299.99</span></p>
+                            <button class="btn btn-primary mt-auto" onclick="anadirAlCarrito('Monitor curvo 32 QHD 165 Hz', 239.99)">Anadir al carrito</button>
+                        </div>
+                    </article>
+                </div>
+                <div class="col columna-producto" data-categoria="ordenadores">
+                    <article class="card tarjeta-producto">
+                        <img src="img/cat-ordenadores.png" class="card-img-top" alt="Torre de sobremesa">
+                        <div class="card-body d-flex flex-column">
+                            <h2 class="card-title h6">Torre PCStore Office i5</h2>
+                            <p class="precio">649.99 EUR</p>
+                            <button class="btn btn-primary mt-auto" onclick="anadirAlCarrito('Torre PCStore Office i5', 649.99)">Anadir al carrito</button>
+                        </div>
+                    </article>
+                </div>
+                <div class="col columna-producto" data-categoria="portatiles">
+                    <article class="card tarjeta-producto">
+                        <img src="img/cat-portatiles.png" class="card-img-top" alt="Portatil ultraligero">
+                        <div class="card-body d-flex flex-column">
+                            <h2 class="card-title h6">Portatil ultraligero 14" Ryzen 7</h2>
+                            <p class="precio">749.99 EUR</p>
+                            <button class="btn btn-primary mt-auto" onclick="anadirAlCarrito('Portatil ultraligero 14 Ryzen 7', 749.99)">Anadir al carrito</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <div id="sin-resultados" class="alert alert-light border text-center mt-4 d-none" role="status">
+                <i class="bi bi-emoji-frown me-1"></i> No hay productos que coincidan con tu busqueda.
+            </div>
+
+            <div class="alert alert-primary d-flex align-items-center mt-5" role="note">
+                <i class="bi bi-stars fs-4 me-3" aria-hidden="true"></i>
+                <div>Ya esta aqui la <strong>Serie Gaming 2026</strong>. <a href="novedades.html" class="alert-link">Ver novedades</a></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-tienda">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5>PC<span class="text-primary">Store</span></h5>
+                    <p>Tu tienda de ordenadores, portatiles, monitores y accesorios gaming. Envio en 24/48 h y 2 anos de garantia.</p>
+                    <div class="redes">
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Tienda</h5>
+                    <ul class="list-unstyled d-grid gap-2">
+                        <li><a href="catalogo.html">Catalogo</a></li>
+                        <li><a href="novedades.html">Novedades</a></li>
+                        <li><a href="carrito.html">Carrito</a></li>
+                        <li><a href="pago.html">Pago</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Mi cuenta</h5>
+                    <ul class="list-unstyled d-grid gap-2">
+                        <li><a href="login.html">Iniciar sesion</a></li>
+                        <li><a href="registro.html">Registrarse</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Boletin de novedades</h5>
+                    <p>Recibe las ofertas antes que nadie.</p>
+                    <form class="needs-validation" data-accion="boletin" novalidate>
+                        <div class="input-group">
+                            <label for="email-boletin" class="visually-hidden">Correo electronico</label>
+                            <input type="email" class="form-control" id="email-boletin" placeholder="tu@correo.com" required>
+                            <button class="btn btn-primary" type="submit">Suscribirme</button>
+                            <div class="invalid-feedback">Escribe un correo valido.</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="licencia">
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+                    <img alt="Licencia Creative Commons" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" width="88" height="31">
+                </a>
+                <p class="mt-2 mb-0">&copy; <span class="ano-actual">2026</span> PCStore. Esta obra esta bajo una
+                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia Creative Commons Atribucion-NoComercial-SinDerivadas 4.0 Internacional</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

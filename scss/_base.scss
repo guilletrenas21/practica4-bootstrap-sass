@@ -1,0 +1,82 @@
+// ==========================================================
+// _base.scss
+// Estilos generales que comparten todas las paginas.
+// ==========================================================
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+// Titulo de seccion con una rayita azul debajo
+.titulo-seccion {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: .5rem;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 4px;
+        border-radius: 2px;
+        background-color: $primary;
+    }
+
+    &.text-center::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+// Banner oscuro de cabecera de cada pagina (catalogo, novedades...)
+.banner-pagina {
+    background: linear-gradient(120deg, $gris-oscuro 0%, #1f2937 100%);
+    color: #ffffff;
+    border-radius: $border-radius-lg;
+    padding: 3rem 2.5rem;
+    margin-top: 1.5rem;
+
+    p {
+        color: #e5e7eb;
+        margin-bottom: 0;
+    }
+}
+
+// Boton principal con un poco de movimiento
+.btn-primary {
+    transition: transform .15s ease, box-shadow .15s ease;
+
+    &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 .4rem 1rem rgba($primary, .35);
+    }
+}
+
+// Migas de pan
+.breadcrumb a {
+    color: $texto-suave;
+    text-decoration: none;
+
+    &:hover {
+        color: $primary;
+    }
+}
+
+// Etiqueta de promocion naranja
+.bg-promo {
+    background-color: $naranja-promo !important;
+    color: #ffffff !important;
+}
+
+.text-promo {
+    color: $naranja-promo !important;
+}

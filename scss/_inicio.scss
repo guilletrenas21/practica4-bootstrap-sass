@@ -1,0 +1,138 @@
+// ==========================================================
+// _inicio.scss
+// Pagina principal: carrusel, categorias, ventajas y multimedia.
+// ==========================================================
+
+// --- Carrusel de portada ---
+.carrusel-portada {
+    margin-top: 1.5rem;
+    border-radius: $border-radius-lg;
+    overflow: hidden;
+
+    .carousel-item {
+        background-color: $gris-oscuro;
+        color: #ffffff;
+        min-height: 380px;
+    }
+
+    .slide-contenido {
+        min-height: 380px;
+        padding: 3rem 4rem;
+    }
+
+    h1, h2 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    img {
+        max-height: 300px;
+        object-fit: contain;
+    }
+
+    // Flechas mas estrechas para que no tapen el texto
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 4rem;
+    }
+
+    // Cada slide con un fondo distinto
+    .slide-azul {
+        background: linear-gradient(120deg, #1e3a8a 0%, $azul-tienda 100%);
+    }
+
+    .slide-promo {
+        background: linear-gradient(120deg, $gris-oscuro 0%, darken($naranja-promo, 15%) 100%);
+    }
+}
+
+// --- Categorias ---
+.tarjeta-categoria {
+    background-color: $gris-tarjeta;
+    border-radius: $border-radius;
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    font-weight: 600;
+    color: $texto;
+    text-decoration: none;
+    transition: background-color .2s ease, transform .2s ease;
+
+    img {
+        width: 45px;
+        height: 45px;
+        object-fit: contain;
+    }
+
+    &:hover {
+        background-color: #e0e7ff;
+        transform: translateY(-2px);
+        color: $texto;
+    }
+}
+
+// --- Ventajas (envio, garantia...) ---
+.ventaja {
+    text-align: center;
+    padding: 1.5rem 1rem;
+
+    .icono {
+        font-size: 2rem;
+        color: $primary;
+        display: inline-block;
+        margin-bottom: .5rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        color: $texto-suave;
+        font-size: .9rem;
+        margin: 0;
+    }
+}
+
+// --- Video y audio ---
+.video-presentacion {
+    width: 100%;
+    max-width: 800px;
+    border-radius: $border-radius-lg;
+    background-color: #000000;
+}
+
+.reproductor-audio audio {
+    width: 100%;
+    max-width: 400px;
+}
+
+// --- Opiniones ---
+.opinion {
+    background-color: $gris-tarjeta;
+    border-radius: $border-radius;
+    padding: 1.5rem;
+    height: 100%;
+
+    .estrellas {
+        color: $amarillo;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .carrusel-portada {
+        .slide-contenido {
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+
+        h1, h2 {
+            font-size: 1.7rem;
+        }
+
+        img {
+            max-height: 180px;
+        }
+    }
+}

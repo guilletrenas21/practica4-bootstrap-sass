@@ -1,0 +1,20 @@
+// ==========================================================
+// main.scss
+// Fichero principal. Junta todo en UN UNICO css: css/style.css
+// Compilar con:  npm run build:css
+// ==========================================================
+
+// 1. Nuestras variables (cambian el tema de Bootstrap)
+@import "variables";
+
+// 2. Bootstrap completo con nuestro tema
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// 3. Estilos propios separados por zona de la pagina
+@import "base";
+@import "header";
+@import "footer";
+@import "inicio";
+@import "productos";
+@import "formularios";
+@import "carrito";

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ASUS ROG Gaming Desktop con Intel Core i7, 32 GB y RTX 4060 Ti.">
+    <title>Detalle de producto - Tienda de Ordenadores</title>
+    <link rel="icon" type="image/x-icon" href="img/logotipoweb.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Unico CSS de la web: Bootstrap + estilos propios compilados con SASS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="barra-aviso">
+        <i class="bi bi-truck me-1" aria-hidden="true"></i> Envio gratis en pedidos de mas de 50 EUR -
+        <a href="novedades.html">Descubre la nueva Serie 2026</a>
+    </div>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-tienda sticky-top" aria-label="Menu principal">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <img src="img/logotipoweb.ico" alt="">
+                    PC<span>Store</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal"
+                    aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu-principal">
+                    <ul class="navbar-nav mx-auto gap-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogo.html">Catalogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="novedades.html">Novedades <span class="badge text-bg-warning ms-1">Nuevo</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="detalle.html">Producto</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-2 py-2 py-lg-0">
+                        <div id="zona-usuario" class="d-flex gap-2"></div>
+                        <a href="carrito.html" class="btn btn-light btn-carrito ms-2" aria-label="Ver carrito">
+                            <i class="bi bi-cart3" aria-hidden="true"></i>
+                            <span class="badge rounded-pill text-bg-primary contador-carrito">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <nav aria-label="breadcrumb" class="mt-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                    <li class="breadcrumb-item"><a href="catalogo.html">Ordenadores</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">ASUS ROG Gaming Desktop</li>
+                </ol>
+            </nav>
+
+            <section class="row g-5 mt-1">
+                <div class="col-lg-6">
+                    <div class="imagen-detalle mb-3">
+                        <img src="img/asus-rog.png" id="imagen-principal" alt="ASUS ROG Desktop vista frontal">
+                    </div>
+                    <div class="galeria-miniaturas d-flex gap-2 justify-content-center">
+                        <img src="img/asus-rog.png" class="activa" alt="ASUS ROG Desktop vista frontal">
+                        <img src="img/cat-ordenadores.png" alt="ASUS ROG Desktop vista lateral">
+                        <img src="img/cat-accesorios.png" alt="Accesorios incluidos">
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <span class="badge text-bg-success mb-2">Top ventas</span>
+                    <h1 class="titulo-detalle">ASUS - ROG Gaming Desktop - Intel Core i7-14700F - 32GB - RTX 4060 Ti - 2TB SSD</h1>
+                    <p class="mb-3">
+                        <span class="estrellas" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        <span class="text-secondary ms-1">4.8 (125 opiniones)</span>
+                    </p>
+                    <p class="precio-grande mb-1">1499.99 EUR</p>
+                    <p class="text-secondary small">IVA incluido. O 3 plazos de 500 EUR sin intereses.</p>
+                    <p class="stock"><i class="bi bi-check-circle-fill me-1"></i>En stock - recibelo manana</p>
+
+                    <div class="d-flex flex-wrap gap-3 my-4">
+                        <div class="input-group selector-cantidad">
+                            <button class="btn btn-outline-secondary" type="button" id="btn-menos" aria-label="Quitar uno">-</button>
+                            <label for="cantidad" class="visually-hidden">Cantidad</label>
+                            <input type="number" class="form-control" id="cantidad" value="1" min="1" max="10">
+                            <button class="btn btn-outline-secondary" type="button" id="btn-mas" aria-label="Anadir uno">+</button>
+                        </div>
+                        <button class="btn btn-primary btn-lg flex-grow-1" onclick="anadirDesdeDetalle('ASUS - ROG Gaming Desktop', 1499.99)">
+                            <i class="bi bi-cart-plus me-1"></i> Anadir al carrito
+                        </button>
+                    </div>
+
+                    <ul class="list-group list-group-flush small mb-4">
+                        <li class="list-group-item px-0"><i class="bi bi-truck text-primary me-2"></i>Envio gratis en 24/48 h</li>
+                        <li class="list-group-item px-0"><i class="bi bi-shield-check text-primary me-2"></i>2 anos de garantia oficial ASUS</li>
+                        <li class="list-group-item px-0"><i class="bi bi-arrow-repeat text-primary me-2"></i>30 dias de devolucion</li>
+                    </ul>
+                    <p class="small text-secondary mb-0"><strong>SKU:</strong> 6560123 &nbsp; <strong>Categoria:</strong> Ordenadores</p>
+                </div>
+            </section>
+
+            <!-- PESTANAS de Bootstrap -->
+            <section class="mt-5">
+                <ul class="nav nav-tabs" id="pestanas-producto" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="tab-desc" data-bs-toggle="tab" data-bs-target="#panel-desc" type="button" role="tab" aria-controls="panel-desc" aria-selected="true">Descripcion</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tab-specs" data-bs-toggle="tab" data-bs-target="#panel-specs" type="button" role="tab" aria-controls="panel-specs" aria-selected="false">Especificaciones</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tab-opiniones" data-bs-toggle="tab" data-bs-target="#panel-opiniones" type="button" role="tab" aria-controls="panel-opiniones" aria-selected="false">Opiniones</button>
+                    </li>
+                </ul>
+                <div class="tab-content border border-top-0 rounded-bottom p-4">
+                    <div class="tab-pane fade show active" id="panel-desc" role="tabpanel" aria-labelledby="tab-desc">
+                        <p>Domina tus juegos favoritos con el ASUS ROG Gaming Desktop. Su procesador Intel Core i7-14700F y la grafica NVIDIA GeForce RTX 4060 Ti mueven los juegos mas exigentes con fluidez.</p>
+                        <p class="mb-0">Con 32 GB de memoria y 2 TB de almacenamiento SSD tendras sitio para toda tu biblioteca. La iluminacion RGB Aura Sync y la refrigeracion optimizada lo mantienen frio y silencioso.</p>
+                    </div>
+                    <div class="tab-pane fade" id="panel-specs" role="tabpanel" aria-labelledby="tab-specs">
+                        <table class="table table-striped lista-specs mb-0">
+                            <tbody>
+                                <tr><th scope="row">Procesador</th><td>Intel Core i7-14700F</td></tr>
+                                <tr><th scope="row">Grafica</th><td>NVIDIA GeForce RTX 4060 Ti 8 GB</td></tr>
+                                <tr><th scope="row">Memoria</th><td>32 GB DDR5</td></tr>
+                                <tr><th scope="row">Almacenamiento</th><td>2 TB SSD NVMe</td></tr>
+                                <tr><th scope="row">Sistema</th><td>Windows 11 Home</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="panel-opiniones" role="tabpanel" aria-labelledby="tab-opiniones">
+                        <p class="mb-1 fw-semibold">Excelente para jugar en 1440p <span class="estrellas small">&#9733;&#9733;&#9733;&#9733;&#9733;</span></p>
+                        <p class="text-secondary">Llego bien embalado y en un dia. Muy silencioso.</p>
+                        <p class="mb-1 fw-semibold">Buena relacion calidad precio <span class="estrellas small">&#9733;&#9733;&#9733;&#9733;&#9734;</span></p>
+                        <p class="text-secondary mb-0">Lo uso para jugar y editar video, va sobrado.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Relacionados -->
+            <section class="mt-5">
+                <h2 class="titulo-seccion">Productos relacionados</h2>
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="card flex-row align-items-center p-2 tarjeta-producto text-start">
+                            <img src="img/acer-nitro.png" width="80" height="80" class="object-fit-contain" alt="Acer Nitro">
+                            <div class="card-body py-2">
+                                <h3 class="h6 mb-1">Acer Nitro 27" Monitor</h3>
+                                <p class="small text-secondary mb-0">129.99 EUR</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card flex-row align-items-center p-2 tarjeta-producto text-start">
+                            <img src="img/cat-accesorios.png" width="80" height="80" class="object-fit-contain" alt="Kit teclado y raton">
+                            <div class="card-body py-2">
+                                <h3 class="h6 mb-1">Kit teclado y raton RGB</h3>
+                                <p class="small text-secondary mb-0">59.99 EUR</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card flex-row align-items-center p-2 tarjeta-producto text-start">
+                            <img src="img/hp-victus.png" width="80" height="80" class="object-fit-contain" alt="HP Victus">
+                            <div class="card-body py-2">
+                                <h3 class="h6 mb-1">HP Victus 16.1" Laptop</h3>
+                                <p class="small text-secondary mb-0">899.99 EUR</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer-tienda">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5>PC<span class="text-primary">Store</span></h5>
+                    <p>Tu tienda de ordenadores, portatiles, monitores y accesorios gaming. Envio en 24/48 h y 2 anos de garantia.</p>
+                    <div class="redes">
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Tienda</h5>
+                    <ul class="list-unstyled d-grid gap-2">
+                        <li><a href="catalogo.html">Catalogo</a></li>
+                        <li><a href="novedades.html">Novedades</a></li>
+                        <li><a href="carrito.html">Carrito</a></li>
+                        <li><a href="pago.html">Pago</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Mi cuenta</h5>
+                    <ul class="list-unstyled d-grid gap-2">
+                        <li><a href="login.html">Iniciar sesion</a></li>
+                        <li><a href="registro.html">Registrarse</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Boletin de novedades</h5>
+                    <p>Recibe las ofertas antes que nadie.</p>
+                    <form class="needs-validation" data-accion="boletin" novalidate>
+                        <div class="input-group">
+                            <label for="email-boletin" class="visually-hidden">Correo electronico</label>
+                            <input type="email" class="form-control" id="email-boletin" placeholder="tu@correo.com" required>
+                            <button class="btn btn-primary" type="submit">Suscribirme</button>
+                            <div class="invalid-feedback">Escribe un correo valido.</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="licencia">
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+                    <img alt="Licencia Creative Commons" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" width="88" height="31">
+                </a>
+                <p class="mt-2 mb-0">&copy; <span class="ano-actual">2026</span> PCStore. Esta obra esta bajo una
+                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia Creative Commons Atribucion-NoComercial-SinDerivadas 4.0 Internacional</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tienda de la nueva Serie Gaming 2026 y promociones.">
+    <title>Novedades - Tienda de Ordenadores</title>
+    <link rel="icon" type="image/x-icon" href="img/logotipoweb.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Unico CSS de la web: Bootstrap + estilos propios compilados con SASS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="barra-aviso">
+        <i class="bi bi-truck me-1" aria-hidden="true"></i> Envio gratis en pedidos de mas de 50 EUR -
+        <a href="novedades.html">Descubre la nueva Serie 2026</a>
+    </div>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-tienda sticky-top" aria-label="Menu principal">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <img src="img/logotipoweb.ico" alt="">
+                    PC<span>Store</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal"
+                    aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu-principal">
+                    <ul class="navbar-nav mx-auto gap-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogo.html">Catalogo</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="novedades.html">Novedades <span class="badge text-bg-warning ms-1">Nuevo</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="detalle.html">Producto</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-2 py-2 py-lg-0">
+                        <div id="zona-usuario" class="d-flex gap-2"></div>
+                        <a href="carrito.html" class="btn btn-light btn-carrito ms-2" aria-label="Ver carrito">
+                            <i class="bi bi-cart3" aria-hidden="true"></i>
+                            <span class="badge rounded-pill text-bg-primary contador-carrito">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <nav aria-label="breadcrumb" class="mt-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Novedades</li>
+                </ol>
+            </nav>
+
+            <!-- Banner con cuenta atras -->
+            <section class="banner-pagina banner-novedades mt-2">
+                <div class="row align-items-center g-4">
+                    <div class="col-lg-7">
+                        <span class="badge text-bg-warning mb-2">Lanzamiento</span>
+                        <h1>Nueva Serie Gaming 2026</h1>
+                        <p class="mb-4">Los equipos con la nueva generacion de graficas ya estan aqui. Reservalos antes que nadie.</p>
+                        <div class="cuenta-atras d-flex gap-2" data-fecha="2026-12-01T10:00:00" aria-label="Tiempo hasta el lanzamiento">
+                            <div class="bloque"><strong class="dias">0</strong><small>dias</small></div>
+                            <div class="bloque"><strong class="horas">00</strong><small>horas</small></div>
+                            <div class="bloque"><strong class="minutos">00</strong><small>min</small></div>
+                            <div class="bloque"><strong class="segundos">00</strong><small>seg</small></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 text-center">
+                        <img src="img/asus-rog.png" class="img-fluid" style="max-height: 240px;" alt="ASUS ROG Strix G16 2026">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Codigos promocionales -->
+            <section class="row g-3 my-4" aria-label="Promociones">
+                <div class="col-md-4">
+                    <div class="alert alert-primary h-100 mb-0">
+                        <h2 class="h6 alert-heading"><i class="bi bi-tag-fill me-1"></i> GAMER20</h2>
+                        <p class="small mb-0">20% en monitores durante la semana gaming.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="alert alert-warning h-100 mb-0">
+                        <h2 class="h6 alert-heading"><i class="bi bi-gift-fill me-1"></i> Regalo</h2>
+                        <p class="small mb-0">Kit teclado y raton gratis con la reserva de un portatil 2026.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="alert alert-success h-100 mb-0">
+                        <h2 class="h6 alert-heading"><i class="bi bi-credit-card-fill me-1"></i> 3 plazos</h2>
+                        <p class="small mb-0">Paga en 3 meses sin intereses a partir de 300 EUR.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="d-flex flex-wrap justify-content-between align-items-end gap-3">
+                <h2 class="titulo-seccion">Tienda de novedades</h2>
+                <ul class="nav nav-pills mb-4" id="filtros-novedades" role="tablist">
+                    <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#nov-todo" type="button" role="tab" aria-controls="nov-todo" aria-selected="true">Todo</button></li>
+                    <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#nov-reserva" type="button" role="tab" aria-controls="nov-reserva" aria-selected="false">En reserva</button></li>
+                    <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#nov-oferta" type="button" role="tab" aria-controls="nov-oferta" aria-selected="false">Ofertas</button></li>
+                </ul>
+            </div>
+
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="nov-todo" role="tabpanel">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                        <div class="col">
+                            <article class="card tarjeta-producto">
+                                <span class="badge text-bg-warning etiqueta">Reserva</span>
+                                <img src="img/asus-rog.png" class="card-img-top" alt="ASUS ROG Strix G16 2026">
+                                <div class="card-body d-flex flex-column">
+                                    <h3 class="card-title">ASUS ROG Strix G16 - Serie 2026</h3>
+                                    <p class="small text-secondary">RTX 5070 - 32 GB - 1 TB - 240 Hz</p>
+                                    <p class="precio">1899.99 EUR</p>
+                                    <a href="lanzamiento.html" class="btn btn-primary mt-auto">Ver lanzamiento</a>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col">
+                            <article class="card tarjeta-producto">
+                                <span class="badge text-bg-warning etiqueta">Reserva</span>
+                                <img src="img/hp-victus.png" class="card-img-top" alt="HP Victus 16 2026">
+                                <div class="card-body d-flex flex-column">
+                                    <h3 class="card-title">HP Victus 16 - Edicion 2026</h3>
+                                    <p class="small text-secondary">RTX 5060 - 16 GB - 1 TB - 165 Hz</p>
+                                    <p class="precio">1099.99 EUR</p>
+                                    <button class="btn btn-primary mt-auto" onclick="anadirAlCarrito('HP Victus 16 Edicion 2026 (reserva)', 1099.99)">Reservar</button>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col">
+                            <article class="card tarjeta-producto">
+                                <span class="badge bg-promo etiqueta">-20%</span>
+                                <img src="img/acer-nitro.png" class="card-img-top" alt="Acer Nitro 27 OLED">
+                                <div class="card-body d-flex flex-column">
+                                    <h3 class="card-title">Acer Nitro 27" OLED 240 Hz</h3>
+                                    <p class="small text-secondary">QHD - 0.03 ms - HDR True Black</p>
+                                    <p class="precio">479.99 EUR<span class="precio-antes">599.99</span></p>
+                                    <button class="btn btn-primary mt-auto" onclick="anadirAlCarrito('Acer Nitro 27 OLED 240 Hz', 479.99)">Anadir al carrito</button>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col">
+                            <article class="card tarjeta-producto">
+                                <span class="badge text-bg-primary etiqueta">Nuevo</span>
+                                <img src="img/dell-g15.png" class="card-img-top" alt="Dell G16 2026">
+                                <div class="card-body d-flex flex-column">
+                                    <h3 class="card-title">Dell G16 - Edicion 2026</h3>
+                                    <p class="small text-secondary">RTX 5060 - 16 GB - 512 GB - 165 Hz</p>
+                                    <p class="precio">999.99 EUR</p>
+                                    <button class="btn btn-primary mt-auto" onclick="anadirAlCarrito('Dell G16 Edicion 2026', 999.99)">Anadir al carrito</button>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col">
+                            <article class="card tarjeta-producto">
+                                <span class="badge bg-promo etiqueta">-20%</span>
+                                <img src="img/cat-monitores.png" class="card-img-top" alt="Monitor ultrapanoramico">
+                                <div class="card-body d-flex flex-column">
+                                    <h3 class="card-title">Monitor ultrapanoramico 34" 144 Hz</h3>
+                                    <p class="small text-secondary">WQHD - curvo 1500R - USB-C</p>
+                                    <p class="precio">319.99 EUR<span class="precio-antes">399.99</span></p>
+                                    <button class="btn btn-primary mt-auto" onclick="anadirAlCarrito('Monitor ultrapanoramico 34 144 Hz', 319.99)">Anadir al carrito</button>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col">
+                            <article class="card tarjeta-producto">
+                                <span class="badge text-bg-primary etiqueta">Nuevo</span>
+                                <img src="img/cat-accesorios.png" class="card-img-top" alt="Auriculares inalambricos">
+                                <div class="card-body d-flex flex-column">
+                                    <h3 class="card-title">Auriculares gaming inalambricos 7.1</h3>
+                                    <p class="small text-secondary">40 h de bateria - microfono con IA</p>
+                                    <p class="precio">89.99 EUR</p>
+                                    <button class="btn btn-primary mt-auto" onclick="anadirAlCarrito('Auriculares gaming inalambricos 7.1', 89.99)">Anadir al carrito</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="nov-reserva" role="tabpanel">
+                    <div class="list-group">
+                        <a href="lanzamiento.html" class="list-group-item list-group-item-action d-flex align-items-center gap-3 py-3">
+                            <img src="img/asus-rog.png" width="64" height="64" class="object-fit-contain" alt="">
+                            <div class="flex-grow-1"><strong>ASUS ROG Strix G16 - Serie 2026</strong><br><small class="text-secondary">Sale el 1 de diciembre</small></div>
+                            <span class="badge text-bg-warning">1899.99 EUR</span>
+                        </a>
+                        <div class="list-group-item d-flex align-items-center gap-3 py-3">
+                            <img src="img/hp-victus.png" width="64" height="64" class="object-fit-contain" alt="">
+                            <div class="flex-grow-1"><strong>HP Victus 16 - Edicion 2026</strong><br><small class="text-secondary">Sale el 15 de diciembre</small></div>
+                            <span class="badge text-bg-warning">1099.99 EUR</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="nov-oferta" role="tabpanel">
+                    <div class="list-group">
+                        <div class="list-group-item d-flex align-items-center gap-3 py-3">
+                            <img src="img/acer-nitro.png" width="64" height="64" class="object-fit-contain" alt="">
+                            <div class="flex-grow-1"><strong>Acer Nitro 27" OLED 240 Hz</strong><br><small class="text-secondary">Antes 599.99 EUR</small></div>
+                            <span class="badge bg-promo">479.99 EUR</span>
+                        </div>
+                        <div class="list-group-item d-flex align-items-center gap-3 py-3">
+                            <img src="img/cat-monitores.png" width="64" height="64" class="object-fit-contain" alt="">
+                            <div class="flex-grow-1"><strong>Monitor ultrapanoramico 34"</strong><br><small class="text-secondary">Antes 399.99 EUR</small></div>
+                            <span class="badge bg-promo">319.99 EUR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Preguntas frecuentes con acordeon -->
+            <section class="mt-5">
+                <h2 class="titulo-seccion">Preguntas sobre las reservas</h2>
+                <div class="accordion" id="faq-reservas">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">Tengo que pagar al reservar?</button>
+                        </h3>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faq-reservas">
+                            <div class="accordion-body">No. Solo pagas cuando el producto sale a la venta. Te avisamos por correo.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">Puedo cancelar la reserva?</button>
+                        </h3>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faq-reservas">
+                            <div class="accordion-body">Si, en cualquier momento y sin coste desde tu cuenta.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">Cuando llega mi pedido?</button>
+                        </h3>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faq-reservas">
+                            <div class="accordion-body">Las reservas se envian el mismo dia del lanzamiento y llegan en 24/48 h.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer-tienda">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5>PC<span class="text-primary">Store</span></h5>
+                    <p>Tu tienda de ordenadores, portatiles, monitores y accesorios gaming. Envio en 24/48 h y 2 anos de garantia.</p>
+                    <div class="redes">
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Tienda</h5>
+                    <ul class="list-unstyled d-grid gap-2">
+                        <li><a href="catalogo.html">Catalogo</a></li>
+                        <li><a href="novedades.html">Novedades</a></li>
+                        <li><a href="carrito.html">Carrito</a></li>
+                        <li><a href="pago.html">Pago</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Mi cuenta</h5>
+                    <ul class="list-unstyled d-grid gap-2">
+                        <li><a href="login.html">Iniciar sesion</a></li>
+                        <li><a href="registro.html">Registrarse</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Boletin de novedades</h5>
+                    <p>Recibe las ofertas antes que nadie.</p>
+                    <form class="needs-validation" data-accion="boletin" novalidate>
+                        <div class="input-group">
+                            <label for="email-boletin" class="visually-hidden">Correo electronico</label>
+                            <input type="email" class="form-control" id="email-boletin" placeholder="tu@correo.com" required>
+                            <button class="btn btn-primary" type="submit">Suscribirme</button>
+                            <div class="invalid-feedback">Escribe un correo valido.</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="licencia">
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+                    <img alt="Licencia Creative Commons" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" width="88" height="31">
+                </a>
+                <p class="mt-2 mb-0">&copy; <span class="ano-actual">2026</span> PCStore. Esta obra esta bajo una
+                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia Creative Commons Atribucion-NoComercial-SinDerivadas 4.0 Internacional</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

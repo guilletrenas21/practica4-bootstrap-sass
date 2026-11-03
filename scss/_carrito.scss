@@ -1,0 +1,53 @@
+// ==========================================================
+// _carrito.scss
+// Tabla del carrito, resumen y aviso emergente (toast).
+// ==========================================================
+
+.tabla-carrito {
+    th {
+        font-size: .8rem;
+        text-transform: uppercase;
+        color: $texto-suave;
+    }
+
+    td {
+        vertical-align: middle;
+    }
+}
+
+.resumen-carrito {
+    background-color: $gris-tarjeta;
+    border-radius: $border-radius-lg;
+    padding: 1.5rem;
+}
+
+.carrito-vacio {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: $texto-suave;
+
+    .bi {
+        font-size: 3rem;
+        color: $primary;
+    }
+}
+
+// Modal de aviso (compra, registro, inicio de sesion)
+.modal-aviso {
+    .modal-content {
+        border: none;
+        border-radius: $border-radius-lg;
+    }
+
+    .icono-aviso {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.2rem;
+        background-color: rgba($success, .15);
+        color: $success;
+    }
+}

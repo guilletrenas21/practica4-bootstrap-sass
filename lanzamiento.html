@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detalles del nuevo ASUS ROG Strix G16 Serie 2026. Reserva ya.">
+    <title>ASUS ROG Strix G16 2026 - Tienda de Ordenadores</title>
+    <link rel="icon" type="image/x-icon" href="img/logotipoweb.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Unico CSS de la web: Bootstrap + estilos propios compilados con SASS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="barra-aviso">
+        <i class="bi bi-truck me-1" aria-hidden="true"></i> Envio gratis en pedidos de mas de 50 EUR -
+        <a href="novedades.html">Descubre la nueva Serie 2026</a>
+    </div>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-tienda sticky-top" aria-label="Menu principal">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <img src="img/logotipoweb.ico" alt="">
+                    PC<span>Store</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal"
+                    aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu-principal">
+                    <ul class="navbar-nav mx-auto gap-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogo.html">Catalogo</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="novedades.html">Novedades <span class="badge text-bg-warning ms-1">Nuevo</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="detalle.html">Producto</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-2 py-2 py-lg-0">
+                        <div id="zona-usuario" class="d-flex gap-2"></div>
+                        <a href="carrito.html" class="btn btn-light btn-carrito ms-2" aria-label="Ver carrito">
+                            <i class="bi bi-cart3" aria-hidden="true"></i>
+                            <span class="badge rounded-pill text-bg-primary contador-carrito">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <nav aria-label="breadcrumb" class="mt-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                    <li class="breadcrumb-item"><a href="novedades.html">Novedades</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">ASUS ROG Strix G16 2026</li>
+                </ol>
+            </nav>
+
+            <section class="row g-5 mt-1">
+                <div class="col-lg-6">
+                    <div class="imagen-detalle mb-3 position-relative">
+                        <span class="badge text-bg-warning position-absolute top-0 start-0 m-3">Nuevo 2026</span>
+                        <img src="img/asus-rog.png" id="imagen-principal" alt="ASUS ROG Strix G16 vista frontal">
+                    </div>
+                    <div class="galeria-miniaturas d-flex gap-2 justify-content-center">
+                        <img src="img/asus-rog.png" class="activa" alt="ASUS ROG Strix G16 vista frontal">
+                        <img src="img/portada.png" alt="ASUS ROG Strix G16 abierto">
+                        <img src="img/cat-accesorios.png" alt="Kit de regalo con la reserva">
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <p class="text-promo fw-semibold mb-1"><i class="bi bi-stars"></i> Lanzamiento 1 de diciembre</p>
+                    <h1 class="titulo-detalle">ASUS ROG Strix G16 - Serie 2026</h1>
+                    <p class="text-secondary">El portatil gaming mas potente de la nueva serie: grafica RTX 5070, pantalla Nebula 240 Hz y refrigeracion por camara de vapor.</p>
+                    <p class="precio-grande mb-1">1899.99 EUR</p>
+                    <p class="small text-secondary">Reserva gratis. Pagas el dia del lanzamiento.</p>
+
+                    <!-- Barra de progreso: unidades reservadas -->
+                    <div class="my-4">
+                        <div class="d-flex justify-content-between small mb-1">
+                            <span>Unidades reservadas</span><strong>78 / 100</strong>
+                        </div>
+                        <div class="progress" role="progressbar" aria-label="Unidades reservadas" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-promo" style="width: 78%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Elegir configuracion con botones de Bootstrap -->
+                    <p class="fw-semibold mb-2">Configuracion</p>
+                    <div class="btn-group w-100 mb-4" role="group" aria-label="Elegir memoria">
+                        <input type="radio" class="btn-check" name="config" id="config16" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="config16">16 GB / 1 TB</label>
+                        <input type="radio" class="btn-check" name="config" id="config32" autocomplete="off" checked>
+                        <label class="btn btn-outline-primary" for="config32">32 GB / 1 TB</label>
+                        <input type="radio" class="btn-check" name="config" id="config64" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="config64">64 GB / 2 TB</label>
+                    </div>
+
+                    <div class="d-flex flex-wrap gap-3 mb-4">
+                        <div class="input-group selector-cantidad">
+                            <button class="btn btn-outline-secondary" type="button" id="btn-menos" aria-label="Quitar uno">-</button>
+                            <label for="cantidad" class="visually-hidden">Cantidad</label>
+                            <input type="number" class="form-control" id="cantidad" value="1" min="1" max="10">
+                            <button class="btn btn-outline-secondary" type="button" id="btn-mas" aria-label="Anadir uno">+</button>
+                        </div>
+                        <button class="btn btn-primary btn-lg flex-grow-1" onclick="anadirDesdeDetalle('ASUS ROG Strix G16 Serie 2026 (reserva)', 1899.99)">
+                            <i class="bi bi-calendar-check me-1"></i> Reservar ahora
+                        </button>
+                    </div>
+
+                    <div class="alert alert-warning d-flex align-items-center small" role="note">
+                        <i class="bi bi-gift-fill fs-5 me-2" aria-hidden="true"></i>
+                        Regalo: kit teclado y raton RGB con tu reserva.
+                    </div>
+
+                    <!-- Avisame: formulario pequeno -->
+                    <form class="needs-validation" data-accion="reserva" novalidate>
+                        <label for="email-aviso" class="form-label small fw-semibold">Avisame el dia del lanzamiento</label>
+                        <div class="input-group has-validation">
+                            <input type="email" class="form-control" id="email-aviso" placeholder="tu@correo.com" required>
+                            <button class="btn btn-dark" type="submit">Avisame</button>
+                            <div class="invalid-feedback">Escribe un correo valido.</div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Caracteristicas con cards e iconos -->
+            <section class="mt-5">
+                <h2 class="titulo-seccion">Que trae de nuevo</h2>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                    <div class="col"><div class="card h-100 text-bg-light p-3"><i class="bi bi-gpu-card fs-2 text-primary"></i><h3 class="h6 mt-2">RTX 5070</h3><p class="small text-secondary mb-0">Hasta un 40% mas rapida que la serie anterior.</p></div></div>
+                    <div class="col"><div class="card h-100 text-bg-light p-3"><i class="bi bi-display fs-2 text-primary"></i><h3 class="h6 mt-2">Pantalla 240 Hz</h3><p class="small text-secondary mb-0">16" QHD+ con 3 ms y 100% DCI-P3.</p></div></div>
+                    <div class="col"><div class="card h-100 text-bg-light p-3"><i class="bi bi-wind fs-2 text-primary"></i><h3 class="h6 mt-2">Camara de vapor</h3><p class="small text-secondary mb-0">Mas frio y silencioso en partidas largas.</p></div></div>
+                    <div class="col"><div class="card h-100 text-bg-light p-3"><i class="bi bi-battery-charging fs-2 text-primary"></i><h3 class="h6 mt-2">Carga rapida</h3><p class="small text-secondary mb-0">50% de bateria en 30 minutos.</p></div></div>
+                </div>
+            </section>
+
+            <!-- Comparativa con la serie anterior -->
+            <section class="mt-5">
+                <h2 class="titulo-seccion">Comparado con la serie anterior</h2>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-dark">
+                            <tr><th scope="col">Caracteristica</th><th scope="col">ROG 2025</th><th scope="col">ROG Strix G16 2026</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><th scope="row">Grafica</th><td>RTX 4060 Ti</td><td class="fw-semibold text-primary">RTX 5070</td></tr>
+                            <tr><th scope="row">Pantalla</th><td>165 Hz</td><td class="fw-semibold text-primary">240 Hz</td></tr>
+                            <tr><th scope="row">Memoria</th><td>16 GB DDR5</td><td class="fw-semibold text-primary">32 GB DDR5</td></tr>
+                            <tr><th scope="row">Peso</th><td>2.5 kg</td><td class="fw-semibold text-primary">2.2 kg</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer-tienda">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5>PC<span class="text-primary">Store</span></h5>
+                    <p>Tu tienda de ordenadores, portatiles, monitores y accesorios gaming. Envio en 24/48 h y 2 anos de garantia.</p>
+                    <div class="redes">
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Tienda</h5>
+                    <ul class="list-unstyled d-grid gap-2">
+                        <li><a href="catalogo.html">Catalogo</a></li>
+                        <li><a href="novedades.html">Novedades</a></li>
+                        <li><a href="carrito.html">Carrito</a></li>
+                        <li><a href="pago.html">Pago</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Mi cuenta</h5>
+                    <ul class="list-unstyled d-grid gap-2">
+                        <li><a href="login.html">Iniciar sesion</a></li>
+                        <li><a href="registro.html">Registrarse</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Boletin de novedades</h5>
+                    <p>Recibe las ofertas antes que nadie.</p>
+                    <form class="needs-validation" data-accion="boletin" novalidate>
+                        <div class="input-group">
+                            <label for="email-boletin" class="visually-hidden">Correo electronico</label>
+                            <input type="email" class="form-control" id="email-boletin" placeholder="tu@correo.com" required>
+                            <button class="btn btn-primary" type="submit">Suscribirme</button>
+                            <div class="invalid-feedback">Escribe un correo valido.</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="licencia">
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+                    <img alt="Licencia Creative Commons" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" width="88" height="31">
+                </a>
+                <p class="mt-2 mb-0">&copy; <span class="ano-actual">2026</span> PCStore. Esta obra esta bajo una
+                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia Creative Commons Atribucion-NoComercial-SinDerivadas 4.0 Internacional</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

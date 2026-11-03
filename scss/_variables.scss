@@ -1,0 +1,51 @@
+// ==========================================================
+// _variables.scss
+// Colores y fuentes de la tienda. Se cargan ANTES de Bootstrap
+// para cambiar su tema (primary, dark, light, fuentes, bordes).
+// ==========================================================
+
+// --- Colores de la marca (los mismos de la practica anterior) ---
+$azul-tienda:   #3b82f6;   // boton azul original
+$azul-oscuro:   #2563eb;   // hover del boton azul
+$gris-oscuro:   #2c2c2c;   // fondo de la portada y del footer
+$gris-tarjeta:  #f4f5f7;   // fondo de las tarjetas
+$texto:         #111827;   // texto principal
+$texto-suave:   #6b7280;   // texto de los enlaces del menu
+$verde-stock:   #10b981;   // "En stock"
+$amarillo:      #fbbf24;   // estrellas de valoracion
+$naranja-promo: #f97316;   // color nuevo para promociones
+
+// --- Tema de Bootstrap ---
+$primary:   $azul-tienda;
+$secondary: $texto-suave;
+$success:   $verde-stock;
+$warning:   $amarillo;
+$danger:    #ef4444;
+$info:      #0ea5e9;
+$light:     $gris-tarjeta;
+$dark:      $gris-oscuro;
+
+$body-color: $texto;
+$body-bg:    #ffffff;
+$link-color: $azul-tienda;
+
+// --- Tipografia ---
+$font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+$headings-font-weight: 700;
+$font-weight-bold: 700;
+
+// --- Formas ---
+$border-radius:    .5rem;
+$border-radius-lg: .75rem;
+$border-radius-sm: .375rem;
+$btn-font-weight:  600;
+$card-border-color: transparent;
+$card-cap-bg: transparent;
+$input-focus-border-color: $azul-tienda;
+$navbar-dark-color: rgba(255, 255, 255, .75);
+$navbar-dark-hover-color: #ffffff;
+
+// --- Sombras suaves ---
+$enable-shadows: false;
+$box-shadow-sm: 0 .125rem .5rem rgba(17, 24, 39, .06);
+$box-shadow:    0 .5rem 1.5rem rgba(17, 24, 39, .10);

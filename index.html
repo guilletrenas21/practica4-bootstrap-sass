@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tienda de ordenadores, portatiles gaming, monitores y accesorios.">
+    <title>Inicio - Tienda de Ordenadores</title>
+    <link rel="icon" type="image/x-icon" href="img/logotipoweb.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Unico CSS de la web: Bootstrap + estilos propios compilados con SASS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="barra-aviso">
+        <i class="bi bi-truck me-1" aria-hidden="true"></i> Envio gratis en pedidos de mas de 50 EUR -
+        <a href="novedades.html">Descubre la nueva Serie 2026</a>
+    </div>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-tienda sticky-top" aria-label="Menu principal">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <img src="img/logotipoweb.ico" alt="">
+                    PC<span>Store</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal"
+                    aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu-principal">
+                    <ul class="navbar-nav mx-auto gap-lg-3">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="catalogo.html">Catalogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="novedades.html">Novedades <span class="badge text-bg-warning ms-1">Nuevo</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="detalle.html">Producto</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-2 py-2 py-lg-0">
+                        <div id="zona-usuario" class="d-flex gap-2"></div>
+                        <a href="carrito.html" class="btn btn-light btn-carrito ms-2" aria-label="Ver carrito">
+                            <i class="bi bi-cart3" aria-hidden="true"></i>
+                            <span class="badge rounded-pill text-bg-primary contador-carrito">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+
+            <!-- CARRUSEL de Bootstrap -->
+            <div id="carrusel-portada" class="carousel slide carrusel-portada" data-bs-ride="carousel" aria-label="Destacados">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carrusel-portada" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Diapositiva 1"></button>
+                    <button type="button" data-bs-target="#carrusel-portada" data-bs-slide-to="1" aria-label="Diapositiva 2"></button>
+                    <button type="button" data-bs-target="#carrusel-portada" data-bs-slide-to="2" aria-label="Diapositiva 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row align-items-center slide-contenido">
+                            <div class="col-md-6">
+                                <span class="badge text-bg-primary mb-3">Mas vendidos</span>
+                                <h1>Encuentra la mejor seleccion de ordenadores</h1>
+                                <p class="lead text-white-50">Portatiles, sobremesa y monitores gaming al mejor precio.</p>
+                                <a href="catalogo.html" class="btn btn-primary btn-lg mt-2">Explorar ahora <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                            <div class="col-md-6 text-center mt-4 mt-md-0">
+                                <img src="img/portada.png" class="img-fluid" alt="Portatil gaming abierto">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item slide-azul">
+                        <div class="row align-items-center slide-contenido">
+                            <div class="col-md-6">
+                                <span class="badge text-bg-warning mb-3">Nuevo lanzamiento</span>
+                                <h2>ASUS ROG Strix G16 Serie 2026</h2>
+                                <p class="lead text-white-50">RTX 5070, pantalla 240 Hz y refrigeracion por camara de vapor.</p>
+                                <a href="lanzamiento.html" class="btn btn-light btn-lg mt-2">Reservar ya</a>
+                            </div>
+                            <div class="col-md-6 text-center mt-4 mt-md-0">
+                                <img src="img/asus-rog.png" class="img-fluid" alt="Ordenador ASUS ROG">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item slide-promo">
+                        <div class="row align-items-center slide-contenido">
+                            <div class="col-md-6">
+                                <span class="badge bg-promo mb-3">-20%</span>
+                                <h2>Semana gaming: monitores rebajados</h2>
+                                <p class="lead text-white-50">Usa el codigo GAMER20 en la pagina de pago.</p>
+                                <a href="novedades.html" class="btn btn-light btn-lg mt-2">Ver promociones</a>
+                            </div>
+                            <div class="col-md-6 text-center mt-4 mt-md-0">
+                                <img src="img/acer-nitro.png" class="img-fluid" alt="Monitor Acer Nitro">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carrusel-portada" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carrusel-portada" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+
+            <!-- CATEGORIAS con la rejilla de Bootstrap -->
+            <section class="py-5" aria-labelledby="titulo-categorias">
+                <h2 class="visually-hidden" id="titulo-categorias">Categorias</h2>
+                <div class="row g-3">
+                    <div class="col-6 col-lg-3">
+                        <a href="catalogo.html" class="tarjeta-categoria"><img src="img/cat-portatiles.png" alt="">Portatiles</a>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <a href="catalogo.html" class="tarjeta-categoria"><img src="img/cat-ordenadores.png" alt="">Ordenadores</a>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <a href="catalogo.html" class="tarjeta-categoria"><img src="img/cat-accesorios.png" alt="">Accesorios</a>
+                    </div>
+                    <div class="col-6 col-lg-3">
+                        <a href="catalogo.html" class="tarjeta-categoria"><img src="img/cat-monitores.png" alt="">Monitores</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PRODUCTOS DESTACADOS con cards -->
+            <section aria-labelledby="titulo-destacados">
+                <div class="d-flex justify-content-between align-items-end mb-2">
+                    <h2 class="titulo-seccion" id="titulo-destacados">Productos destacados</h2>
+                    <a href="catalogo.html" class="mb-4 fw-semibold">Ver todo <i class="bi bi-chevron-right"></i></a>
+                </div>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+                    <div class="col">
+                        <article class="card tarjeta-producto">
+                            <span class="badge text-bg-danger etiqueta">-10%</span>
+                            <img src="img/hp-victus.png" class="card-img-top" alt="HP Victus">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">HP - Victus 16.1" Gaming Laptop</h3>
+                                <p class="precio">899.99 EUR<span class="precio-antes">999.99</span></p>
+                                <button class="btn btn-primary mt-auto" onclick="anadirAlCarrito('HP - Victus 16.1 Gaming Laptop', 899.99)">Anadir al carrito</button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="card tarjeta-producto">
+                            <img src="img/dell-g15.png" class="card-img-top" alt="Dell G15">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">Dell - G15 15.6" Gaming Laptop</h3>
+                                <p class="precio">899.99 EUR</p>
+                                <button class="btn btn-primary mt-auto" onclick="anadirAlCarrito('Dell - G15 15.6 Gaming Laptop', 899.99)">Anadir al carrito</button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="card tarjeta-producto">
+                            <span class="badge text-bg-success etiqueta">Top ventas</span>
+                            <img src="img/asus-rog.png" class="card-img-top" alt="ASUS ROG">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">ASUS - ROG Gaming Desktop</h3>
+                                <p class="precio">1499.99 EUR</p>
+                                <a href="detalle.html" class="btn btn-primary mt-auto">Ver detalles</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="card tarjeta-producto">
+                            <img src="img/acer-nitro.png" class="card-img-top" alt="Acer Nitro">
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title">Acer - Nitro 27" Gaming Monitor</h3>
+                                <p class="precio">129.99 EUR</p>
+                                <button class="btn btn-primary mt-auto" onclick="anadirAlCarrito('Acer - Nitro 27 Gaming Monitor', 129.99)">Anadir al carrito</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- VENTAJAS con iconos -->
+            <section class="row g-3 my-5 border-top border-bottom" aria-label="Ventajas de comprar con nosotros">
+                <div class="col-6 col-md-3 ventaja">
+                    <i class="bi bi-truck icono" aria-hidden="true"></i>
+                    <h3>Envio 24/48 h</h3>
+                    <p>Gratis desde 50 EUR</p>
+                </div>
+                <div class="col-6 col-md-3 ventaja">
+                    <i class="bi bi-shield-check icono" aria-hidden="true"></i>
+                    <h3>2 anos de garantia</h3>
+                    <p>En todos los productos</p>
+                </div>
+                <div class="col-6 col-md-3 ventaja">
+                    <i class="bi bi-arrow-repeat icono" aria-hidden="true"></i>
+                    <h3>Devolucion facil</h3>
+                    <p>30 dias para cambiar</p>
+                </div>
+                <div class="col-6 col-md-3 ventaja">
+                    <i class="bi bi-credit-card icono" aria-hidden="true"></i>
+                    <h3>Pago seguro</h3>
+                    <p>Tarjeta, PayPal o Bizum</p>
+                </div>
+            </section>
+
+            <!-- MULTIMEDIA -->
+            <section class="text-center" aria-labelledby="titulo-multimedia">
+                <h2 class="titulo-seccion text-center" id="titulo-multimedia">Conoce nuestros productos</h2>
+                <div class="ratio ratio-16x9 mx-auto" style="max-width: 800px;">
+                    <video class="video-presentacion" controls preload="metadata" muted poster="img/portada.png">
+                        <source src="media/presentacion.mp4" type="video/mp4">
+                        Tu navegador no puede reproducir el video.
+                    </video>
+                </div>
+                <div class="reproductor-audio mt-4">
+                    <p class="fw-semibold mb-2">Musica ambiental para navegar:</p>
+                    <audio controls loop preload="none">
+                        <source src="media/ambiente.m4a" type="audio/mp4">
+                    </audio>
+                </div>
+            </section>
+
+            <!-- OPINIONES -->
+            <section class="my-5" aria-labelledby="titulo-opiniones">
+                <h2 class="titulo-seccion" id="titulo-opiniones">Lo que dicen nuestros clientes</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <figure class="opinion">
+                            <div class="estrellas mb-2" aria-label="5 de 5 estrellas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <blockquote class="mb-3">"El portatil llego en un dia y funciona perfecto para jugar."</blockquote>
+                            <figcaption class="text-secondary small">Laura M. - Sevilla</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-4">
+                        <figure class="opinion">
+                            <div class="estrellas mb-2" aria-label="5 de 5 estrellas">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            <blockquote class="mb-3">"Muy buena atencion, me ayudaron a elegir el monitor."</blockquote>
+                            <figcaption class="text-secondary small">Carlos R. - Malaga</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-4">
+                        <figure class="opinion">
+                            <div class="estrellas mb-2" aria-label="4 de 5 estrellas">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                            <blockquote class="mb-3">"Buen precio y el pago fue rapido y seguro."</blockquote>
+                            <figcaption class="text-secondary small">Ana G. - Cordoba</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACTO con validacion de Bootstrap -->
+            <section class="seccion-contacto text-center" id="contacto" aria-labelledby="titulo-contacto">
+                <h2 class="titulo-seccion text-center" id="titulo-contacto">Contacto</h2>
+                <p>Tienes dudas? Escribenos.</p>
+                <form class="needs-validation mx-auto text-start" data-accion="contacto" novalidate style="max-width: 520px;">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="contacto-nombre" placeholder="Nombre" required>
+                        <label for="contacto-nombre">Nombre completo</label>
+                        <div class="invalid-feedback">Escribe tu nombre.</div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="contacto-email" placeholder="correo" required>
+                        <label for="contacto-email">Correo electronico</label>
+                        <div class="invalid-feedback">Escribe un correo valido.</div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" id="contacto-mensaje" placeholder="Mensaje" style="height: 120px;" required></textarea>
+                        <label for="contacto-mensaje">Tu mensaje...</label>
+                        <div class="invalid-feedback">Escribe tu mensaje.</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 py-2">Enviar mensaje</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer-tienda">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5>PC<span class="text-primary">Store</span></h5>
+                    <p>Tu tienda de ordenadores, portatiles, monitores y accesorios gaming. Envio en 24/48 h y 2 anos de garantia.</p>
+                    <div class="redes">
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Tienda</h5>
+                    <ul class="list-unstyled d-grid gap-2">
+                        <li><a href="catalogo.html">Catalogo</a></li>
+                        <li><a href="novedades.html">Novedades</a></li>
+                        <li><a href="carrito.html">Carrito</a></li>
+                        <li><a href="pago.html">Pago</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5>Mi cuenta</h5>
+                    <ul class="list-unstyled d-grid gap-2">
+                        <li><a href="login.html">Iniciar sesion</a></li>
+                        <li><a href="registro.html">Registrarse</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Boletin de novedades</h5>
+                    <p>Recibe las ofertas antes que nadie.</p>
+                    <form class="needs-validation" data-accion="boletin" novalidate>
+                        <div class="input-group">
+                            <label for="email-boletin" class="visually-hidden">Correo electronico</label>
+                            <input type="email" class="form-control" id="email-boletin" placeholder="tu@correo.com" required>
+                            <button class="btn btn-primary" type="submit">Suscribirme</button>
+                            <div class="invalid-feedback">Escribe un correo valido.</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="licencia">
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">
+                    <img alt="Licencia Creative Commons" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" width="88" height="31">
+                </a>
+                <p class="mt-2 mb-0">&copy; <span class="ano-actual">2026</span> PCStore. Esta obra esta bajo una
+                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Licencia Creative Commons Atribucion-NoComercial-SinDerivadas 4.0 Internacional</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

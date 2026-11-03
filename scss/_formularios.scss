@@ -1,0 +1,91 @@
+// ==========================================================
+// _formularios.scss
+// Inicio de sesion, registro, contacto y pago.
+// ==========================================================
+
+// Fondo de las paginas de acceso (login y registro)
+.fondo-acceso {
+    background:
+        radial-gradient(circle at 10% 20%, rgba($primary, .12) 0, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba($naranja-promo, .10) 0, transparent 40%),
+        $gris-tarjeta;
+    padding: 4rem 0;
+}
+
+.tarjeta-acceso {
+    border: none;
+    border-radius: $border-radius-lg;
+    box-shadow: $box-shadow;
+
+    .card-body {
+        padding: 2.5rem;
+    }
+
+    .logo-acceso {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+// Separador "o continua con"
+.separador {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    color: $texto-suave;
+    font-size: .85rem;
+
+    &::before,
+    &::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background-color: #e5e7eb;
+    }
+}
+
+// Barra de fuerza de la contrasena
+.fuerza-clave {
+    height: 6px;
+}
+
+// Formulario de contacto de la portada
+.seccion-contacto {
+    background-color: $gris-tarjeta;
+    border-radius: $border-radius-lg;
+    padding: 3rem 1.5rem;
+}
+
+// Pagina de pago
+.paso-pago {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: $primary;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .85rem;
+    font-weight: 700;
+    margin-right: .5rem;
+}
+
+.resumen-pago {
+    position: sticky;
+    top: 1.5rem;
+}
+
+.metodo-pago {
+    .form-check {
+        border: 1px solid #e5e7eb;
+        border-radius: $border-radius;
+        padding: .75rem .75rem .75rem 2.25rem;
+        margin-bottom: .5rem;
+    }
+
+    .form-check-input:checked + .form-check-label {
+        color: $primary;
+        font-weight: 600;
+    }
+}
